@@ -8,7 +8,8 @@ import { ResidenceService } from 'src/app/core/services/residence.service';
 @Component({
   selector: 'app-add-residence',
   templateUrl: './add-residence.component.html',
-  styleUrls: ['./add-residence.component.css']
+  styleUrls: ['./add-residence.component.css'],
+  //providers:[ResidenceService]
 })
 export class AddResidenceComponent {
 
@@ -34,9 +35,11 @@ export class AddResidenceComponent {
     
       this.R={...F.value};
       console.log(this.R);
-      this.resServ.addResidence(this.R);
-      this.Rout.navigate(['/residences']);
-
-      
+      this.resServ.addResidence(this.R).subscribe(
+        () => {console.log("Residence ajoutée avec succès");
+        this.Rout.navigate(['/residences']);
+        },
+        
+      );
   }
 }

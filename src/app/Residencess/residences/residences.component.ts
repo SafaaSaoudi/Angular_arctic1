@@ -15,10 +15,14 @@ export class ResidencesComponent {
  searchItem= "";
 
  constructor(private resServ:ResidenceService){}
- 
+
  ngOnInit(){
 
-   this.listResidences=this.resServ.getResidences();
+   this.resServ.getResidences().subscribe(
+      data => this.listResidences = data,
+      erreur => console.log(erreur),
+      ( ) => console.log("Le chargement des résidences est terminé")
+   );
 }
 
 
