@@ -10,7 +10,7 @@
     {
       "id": "2",
       "name": "El yasmine",
-      "address": "Ezzahra",
+      "address": "tunis",
       "image": "../../assets/images/R2.jpg",
       "status": "Disponible"
     },
@@ -27,13 +27,6 @@
       "address": "inconnu",
       "image": "../../assets/images/R3.jpg",
       "status": "En Construction"
-    },
-    {
-      "id": 0,
-      "name": "New Residence",
-      "address": "elghazela",
-      "image": "C:\\fakepath\\background.jpeg",
-      "status": "En construction"
     }
   ]
 }

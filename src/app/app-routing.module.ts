@@ -5,6 +5,7 @@ import { ResidencesComponent } from './Residencess/residences/residences.compone
 import { ResidenceDetailsComponent } from './Residencess/residence-details/residence-details.component';
 import { HomeComponent } from './home/home.component';
 import { AddResidenceComponent } from './Residencess/add-residence/add-residence.component';
+import { UpdateResidenceComponent } from './Residencess/update-residence/update-residence.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"residences", component: ResidencesComponent},
   {path:"residenceD/:id", component: ResidenceDetailsComponent},
   {path:'add', component:AddResidenceComponent},
+  {path:"update/:id", component:UpdateResidenceComponent},
   {path:"**", component:ErrorComponent }
 ];
 

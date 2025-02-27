@@ -14,7 +14,7 @@ import { ResidenceService } from 'src/app/core/services/residence.service';
 export class AddResidenceComponent {
 
   addForm= new FormGroup({
-    id: new FormControl(0),
+    id: new FormControl(this.getRandomInt(1,100).toString()),
     name: new FormControl('', Validators.required),
     address: new FormControl('', [Validators.required, Validators.maxLength(20)]),
     image: new FormControl(''),
@@ -41,5 +41,11 @@ export class AddResidenceComponent {
         },
         
       );
+  }
+
+   getRandomInt(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

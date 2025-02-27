@@ -30,5 +30,10 @@ export class ResidencesComponent {
   if (R.address=="inconnu"){alert("Adresse inconnue")}
   else {this.showA=true;}
  }
-
+ delete(id:number){
+  this.resServ.deleteResidence(id).subscribe(()=>{
+    this.resServ.getResidences().subscribe(
+     data => this.listResidences = data)
+  });
+ }
 }
